@@ -7,7 +7,7 @@ function insertRandomImages() {
   for (var i = 0; i < 10; i++) {
     var rand = getRandomInt(1,60).toString();
     var imageNum = rand.length == 1 ? '0' + rand : rand;
-    var image = document.createElement('img');
+    var image = document.createElement('img', {class: 'photo-tile'});
     image.src = 'http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/Ultimate_Campout_Ibex_0' + imageNum + '.jpg';
     container.appendChild(image);
   }

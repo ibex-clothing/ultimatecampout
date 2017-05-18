@@ -3,3 +3,8 @@
   font-style: normal;
   font-weight: 700;
 }
+
+.photo-tile {
+  width: 400px;
+  display: inline-block;
+}
