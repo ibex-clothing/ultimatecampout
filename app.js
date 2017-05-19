@@ -1,14 +1,22 @@
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+function getRandomNumbers(needed,max) {
+  var arr = []
+  while(arr.length < needed){
+      var randomnumber = Math.ceil(Math.random()*max)
+      if(arr.indexOf(randomnumber) > -1) continue;
+      arr[arr.length] = randomnumber;
+  }
+  return arr;
 }
 
 function insertRandomImages() {
   var container = document.getElementById('photo-tiles');
-  for (var i = 0; i < 10; i++) {
-    var rand = getRandomInt(1,60).toString();
-    var imageNum = rand.length == 1 ? '0' + rand : rand;
-    var image = document.createElement('img', {class: 'photo-tile'});
-    image.src = 'http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/Ultimate_Campout_Ibex_0' + imageNum + '.jpg';
+  var imageNums = getRandomNumbers(10,60);
+  for (var i = 0; i < imageNums.length; i++) {
+    var imageNum = imageNums[i].toString();
+    var formatted = imageNum.length == 1 ? '0' + imageNum : imageNum;
+    var image = document.createElement('img');
+    image.src = 'http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/Ultimate_Campout_Ibex_0' + formatted + '.jpg';
+    image.className = 'photo-tile';
     container.appendChild(image);
   }
 }
