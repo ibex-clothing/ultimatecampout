@@ -8,3 +8,11 @@
   width: 400px;
   display: inline-block;
 }
+
+.page-title {
+  text-align: center;
+}
+
+iframe {
+  height: 450px;
+}
