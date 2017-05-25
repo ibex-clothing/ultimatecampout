@@ -72,10 +72,10 @@ else {
         <span class="turning"></span>
         <span>Enter Now</span>
       </a>
-      <div class="block block__top" style="background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/heros/views-green.jpg');">
+      <div class="block block__top">
         <div class="block__content">
           <div class="contest-details">
-            <span>June 2 - 16, 2017</span>
+            <span>June 2 - 30, 2017</span>
           </div>
           <h1>
             <a class="logo" href="/">Ultimate Campout</a>
@@ -99,13 +99,17 @@ else {
       </div>
     </section>
 
-    <section class="intro">
-      <span>What makes the Ultimate Campout?</span>
-      <span>Well-placed tents?</span>
-      <span>Flawless campfires?</span>
-      <span>Tidy camp kitchens?</span>
-      <span>Unbelievable views?</span>
-      <span>We’re on the hunt for exactly that, and to help you with your quest we’re giving away some of the best camping products in the outdoor industry.</span>
+    <section class="block">
+      <div class="block__center">
+        <div class="block__center-content contest-intro">
+          <h2>What makes the Ultimate Campout?</h2>
+          <span>Well-placed tents?</span>
+          <span>Flawless campfires?</span>
+          <span>Tidy camp kitchens?</span>
+          <span>Unbelievable views?</span>
+          <p>We’re on the hunt for exactly that, and to help you with your quest we’re giving away some of the best camping products in the outdoor industry.</p>
+        </div>
+      </div>
     </section>
 
     <section class="prizes">
