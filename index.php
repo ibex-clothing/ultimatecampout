@@ -70,17 +70,22 @@ else {
 
   <div class="background" style="background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/heros/views-green.jpg')">
   </div>
-  <div class="container">
-    <div class="header">
-      <img class="contest-logo" src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/contestlogo.png" alt="Contest Logo" />
-      <h1 class="page-title hidden">Ultimate Campout</h1>
+  <div class="container contest-body">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="header">
+          <img class="contest-logo" src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/contestlogo.png" alt="Contest Logo" />
+          <h1 class="page-title hidden">Ultimate Campout</h1>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <section class="video-container">
+          <iframe src="https://player.vimeo.com/video/203586797" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </section>
+      </div>
     </div>
 
-    <section class="video-container">
-      <iframe src="https://player.vimeo.com/video/203586797" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    </section>
-
-    <section class="info">
+    <section class="intro">
       <div class="body-text-container">
         <h2>What makes the Ultimate Campout?</h2>
         <p class="body-text">Well-placed tents?<br>
@@ -88,17 +93,22 @@ else {
           Tidy camp kitchens?<br>
           Unbelievable views?</p>
         <p class="body-text">We’re on the hunt for exactly that, and to help you with your quest we’re giving away some of the best camping products in the outdoor industry.</p>
-        <h2 class="page-title">How to Enter</h2>
+
+      </div>
+    </section>
+    <section class="info">
+      <div class="body-text-container">
+        <h3 class="page-title">How to Enter</h3>
 
         <h4>Weeks 1-3:</h4>
         <p class="body-text">Fill out the Ultimate Campout contest form and automatically be entered for three prize drawings. We’ll randomly select winners at the end of each week to hike away with that week’s prize package.</p>
 
         <h4>Week 4:</h4>
-        <p class="body-text">Once you’ve entered by filling out the Ultimate Campout contest form, you can start tagging your favorite campsites, best setups, and sharpest views on Instagram using hashtag #ultimatecampout. We’ll select and vote on the places that draw us the most, and award one lucky camper the “Camp One Collection” - a slew of prizes from our outdoor brand friends.</p>
+        <p class="body-text">Once you’ve entered by filling out the Ultimate Campout contest form, you can start tagging your favorite campsites, best setups, and sharpest views on Instagram using hashtag <b>#ultimatecampout</b>. We’ll select and vote on the places that draw us the most, and award one lucky camper the “Camp One Collection” - a slew of prizes from our outdoor brand friends.</p>
 
         <p class="body-text">Weekly winners will hike away with the best camping products on the market.</p>
 
-        <p class="body-text">It’s camp season. Make each night outside amazing!</p>
+        <p class="body-text"><b>It’s camp season. Make each night outside amazing!</b></p>
       </div>
     </section>
 
@@ -138,7 +148,8 @@ else {
               <label>Email Address<span class="required">*</span></label>
               <div>
                 <input type="text" placeholder="sue@example.com" name='email' class="form-control" value='<?=$search['email'] ?>' />
-                <h5><small style="color:#999">Your email address will never be <a href="http://shop.ibex.com/ibex/privacy">mis-used</a>.</small></h5>
+                <small>Your email address will never be <a href="http://shop.ibex.com/ibex/privacy">mis-used</a>.</small>
+                <small><a href="/terms.html">Terms &amp; Conditions</a></small>
               </div>
             </div>
           <?php endif; ?>
@@ -153,13 +164,81 @@ else {
       <?php endif; ?>
     </section>
 
+    <section class="prizes">
+      <div class="row">
+        <h3 class="page-title">Prizes</h3>
+        <div class="col-md-8">
+          <h4 class="page-title">Week 1</h4>
+          <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/Week1.jpg" alt="Week 1 Prizes" class="prize-image"/>
+          <ul>
+            <li><a href="http://www.nemoequipment.com/product/?p=Fillo%20Luxury%20(Moss%20Green)" target="_blank">NEMO Fillo Luxury</a></li>
+            <li><a href="http://shop.theprobar.com/Products/PROBAR-Variety-Packs" target="_blank">Pro Bar Variety Pack</a></li>
+            <li><a href="http://shop.ibex.com/merino-wool-clothing/mens-short-sleeve-shirts/m-w2-sport-t" target="_blank">Ibex W2 Sport T</a></li>
+            <li><a href="https://www.msrgear.com/catalog/product/view/id/16277/s/autoflow-gravity-filter/category/7/" target="_blank">MSR AutoFlow Gravity Filter 2L</a></li>
+            <li><a href="http://www.ruffwear.com/Bivy-Bowl-Collapsible-Dog-Bowl_2?sc=2&category=10" target="_blank">Ruffwear Bivy Bowl</a></li>
+            <li><a href="https://goodto-go.com/shop/" target="_blank">Good To-Go Variety</a></li>
+            <li><a href="https://www.ospreypacks.com/us/en/product/daylite-DAYLITE_662.html" target="_blank">Osprey Packs Daylite</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-4">
+          <h4 class="page-title">Week 2</h4>
+          <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/Week2.jpg" alt="Week 2 Prizes" class="prize-image"/>
+          <ul>
+            <li><a href="http://shop.theprobar.com/Products/PROBAR-Variety-Packs" target="_blank">Pro Bar Variety Pack</a></li>
+            <li><a href="https://www.msrgear.com/stoves/pocketrocket-stove-kit" target="_blank">MSR Pocket Rocket Stove Kit</a></li>
+            <li><a href="https://goodto-go.com/shop/" target="_blank">Good To-Go Variety</a></li>
+            <li><a href="http://www.ruffwear.com/Bivy-Bowl-Collapsible-Dog-Bowl_2?sc=2&category=10" target="_blank">Ruffwear Bivy Bowl</a></li>
+            <li><a href="http://www.ruffwear.com/Highlands-Bed-Dog-Bed?sc=2&category=17" target="_blank">Ruffwear Highlands Bed</a></li>
+            <li><a href="http://shop.ibex.com/merino-wool-clothing/accessories-hats-gloves-bags/indie-sleep-sack" target="_blank">Ibex Indie Sleep Sack</a></li>
+            <li><a href="http://www.nemoequipment.com/product/?p=Helio%20Pressure%20Shower%20(Ocean)" target="_blank">NEMO Helio Pressure Shower</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <h4 class="page-title">Week 3</h4>
+          <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/Week3.jpg" alt="Week 3 Prizes" class="prize-image"/>
+          <ul>
+            <li><a href="http://www.nemoequipment.com/product/?p=Rhumba%2030%20Reg" target="_blank">NEMO Rhumba Spoon Shaped 650 Fill Power DownTek Sleeping Bag</a></li>
+            <li><a href="http://www.nemoequipment.com/product/?p=Galaxi%203P%20(Birch%20Leaf%20Green)%20%26%20Footprint" target="_blank">NEMO Galaxi 3P Backpacking Tent &amp; Footprint</a></li>
+            <li><a href="https://demerbox.com/" target="_blank">DEMERBOX Bluetooth Speaker</a></li>
+            <li><a href="https://www.msrgear.com/stoves/whisperlite-universal" target="_blank">MSR WhisperLite Universal (fuel bottles not included)</a></li>
+            <li><a href="https://www.msrgear.com/cookware/ceramic-2-pot-set" target="_blank">MSR Ceramic 2-Pot Set</a></li>
+            <li><a href="https://goodto-go.com/shop/" target="_blank">Good To-Go Variety</a></li>
+            <li><a href="http://shop.ibex.com/merino-wool-clothing/womens-short-sleeve-shirts/w-w2-kinetic-t" target="_blank">Ibex W’s Kinetic T</a></li>
+            <li><a href="https://www.ospreypacks.com/us/en/product/aether-ag-70-AETHER70_807.html" target="_blank">Osprey Packs Aether AG 70</a></li>
+            <li><a href="http://shop.theprobar.com/Products/PROBAR-Variety-Packs" target="_blank">Pro Bar Variety Pack</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h4 class="page-title">Week 4</h4>
+          <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/Week4.jpg" alt="Week 4 Prizes" class="prize-image"/>
+          <ul>
+            <li><a href="https://www.msrgear.com/catalog/product/view/id/16140/s/windburner/category/5/" target="_blank">MSR WindBurner Stove (fuel not included)</a></li>
+            <li><a href="https://goodto-go.com/shop/" target="_blank">Good To-Go Variety</a></li>
+            <li><a href="http://shop.theprobar.com/Products/PROBAR-Variety-Packs" target="_blank">Pro Bar Variety Pack</a></li>
+            <li><a href="https://www.msrgear.com/water/trailshot" target="_blank">MSR TrailShot Pocket-Sized Water Filter</a></li>
+            <li><a href="https://www.ospreypacks.com/us/en/product/talon-22-TALON22_550.html" target="_blank">Osprey Packs Talon 22</a></li>
+            <li><a href="http://www.ruffwear.com/Highlands-Bed-Dog-Bed?sc=2&category=17" target="_blank">Ruffwear Highlands Bed</a></li>
+            <li><a href="http://www.nemoequipment.com/product/?p=Apollo%203P" target="_blank">NEMO Apollo 3P Bikepacking Tent</a></li>
+            <li><a href="http://shop.ibex.com/merino-wool-clothing/mens-long-sleeve-shirts/m-indie-hoody" target="_blank">Ibex M’s or W’s Indie Hoody</a></li>
+            <li><a href="http://rovrproducts.com/product/8437101315/28106360003" target="_blank">RovR RollR 80 Bike Edition Cooler</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section class="row instagram-container">
       <h2 class="page-title">#ultimatecampout</h2>
       <div id="photo-tiles" class="photo-tiles"></div>
     </section>
   </div>
 
-  <section class="logos">
+  <div class="logos">
     <div class="container">
       <div class="row">
         <div class='logo col-xs-4 col-sm-2 col-md-2'>
@@ -199,7 +278,7 @@ else {
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <script src="app.js"></script>
 </body>
