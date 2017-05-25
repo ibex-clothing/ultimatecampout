@@ -61,6 +61,7 @@ else {
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6961376/7346172/css/fonts.css" />
   <link rel="stylesheet" type="text/css" href="styles/normalize.css" />
   <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 </head>
 
 
@@ -71,7 +72,7 @@ else {
         <span class="turning"></span>
         <span>Enter Now</span>
       </a>
-      <div class="block-top" style="background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/heros/views-green.jpg');">
+      <div class="block block__top" style="background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/heros/views-green.jpg');">
         <div class="block__content">
           <div class="contest-details">
             <span>June 2 - 16, 2017</span>
@@ -84,8 +85,18 @@ else {
       </div>
     </header>
 
-    <section class="video-container">
-      <iframe src="https://player.vimeo.com/video/203586797" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <section class="block block__alt video">
+      <div class="block__center">
+        <div class="block__curtain">
+          <div class="curtain curtain--scroll">
+            <div class="curtain__left">
+            </div>
+            <div class="curtain__right">
+            </div>
+            <iframe src="https://player.vimeo.com/video/203586797" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="intro">

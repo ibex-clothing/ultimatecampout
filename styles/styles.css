@@ -16,6 +16,10 @@ h1 {
   text-transform: uppercase;
 }
 
+iframe {
+  width: 100%;
+}
+
 #page {
   position: relative;
 }
@@ -29,14 +33,35 @@ h1 {
   }
 }
 
-.block-top {
-  height: 94vh;
+.block {
   width: 100%;
-  border: 30px solid #000000;
-  box-sizing: border-box;
+  height: 60vh;
+  min-height: 800px;
   position: relative;
   overflow: hidden;
+}
+
+.block__top {
+  height: 94vh;
+  border: 30px solid #000000;
+  box-sizing: border-box;
+  overflow: hidden;
   background-position: 50%;
+}
+
+.block__alt {
+  border: none;
+  background: #000000;
+}
+
+.block__center {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .block__content {
@@ -49,6 +74,11 @@ h1 {
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.block__curtain {
+  width: 80%;
+  padding: 30px;
 }
 
 .enter-link {
@@ -118,4 +148,30 @@ h1 {
   min-width: 200px;
   width: 100%;
   position: relative;
+}
+
+.curtain {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.curtain__left,
+.curtain__right {
+  z-index: 3;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/curtain.png');
+}
+
+.curtain__left {
+  background-position: 100% 0;
+  left: -50%;
+}
+
+.curtain__right {
+  background-position: 0 0;
+  right: -50%;
 }

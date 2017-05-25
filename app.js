@@ -1,5 +1,4 @@
-// function getRandomNumbers(needed,max) {
-//   var arr = []
+// function getRandomNumbers(needed,max) { //   var arr = []
 //   while(arr.length < needed){
 //       var randomnumber = Math.ceil(Math.random()*max)
 //       if(arr.indexOf(randomnumber) > -1) continue;
@@ -31,3 +30,33 @@
 // document.addEventListener('DOMContentLoaded', function() {
 //   insertRandomImages();
 // });
+
+function isScrolledIntoView(el) {
+    var elemTop = el.getBoundingClientRect().top;
+    var elemBottom = el.getBoundingClientRect().bottom;
+
+    var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+    return isVisible;
+}
+
+window.onload = function() {
+  var leftCurtain = document.getElementsByClassName('curtain__left')[0];
+  var rightCurtain = document.getElementsByClassName('curtain__right')[0];
+  TweenLite.to(rightCurtain, 2, {right: "0%"});
+  TweenLite.to(leftCurtain, 2, {left: "0%"});
+};
+
+
+window.onscroll = function (e) {
+  var leftCurtain = document.getElementsByClassName('curtain__left')[0];
+  var rightCurtain = document.getElementsByClassName('curtain__right')[0];
+
+  if (isScrolledIntoView(leftCurtain)) {
+    TweenLite.to(rightCurtain, 2, {right: "-50%"});
+    TweenLite.to(leftCurtain, 2, {left: "-50%"});
+  } else {
+    TweenLite.to(rightCurtain, 2, {right: "0%"});
+    TweenLite.to(leftCurtain, 2, {left: "0%"});
+  }
+
+}
