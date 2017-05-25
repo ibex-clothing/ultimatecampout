@@ -1,14 +1,121 @@
 body {
   font-family: "Gotham Narrow A", "Gotham Narrow B", Helvetica, sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
+  background-repeat: repeat-x;
+  margin: 0;
+  color: #323232;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.block {
-  border: 30px solid #000000;
-  height: 100vh;
+h1 {
+  font-size: 3.157rem;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+#page {
+  position: relative;
+}
+
+@keyframes b {
+  0% {
+    transform: translateZ(0) rotate(0deg);
+  }
+  100% {
+    transform: translateZ(0) rotate(1turn);
+  }
+}
+
+.block-top {
+  height: 94vh;
   width: 100%;
+  border: 30px solid #000000;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  background-position: 50%;
+}
+
+.block__content {
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.enter-link {
+  text-align: center;
+  width: 130px;
+  height: 130px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 10px;
+  font-size: 1.2rem;
+  z-index: 101;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.enter-link span {
+  z-index: 100;
+}
+
+.turning {
+  z-index: 100;
+  display: block;
+  width: 150px;
+  height: 150px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/spinning-circle.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation-name: b;
+  animation-timing-function: linear;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.contest-details {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.logo {
+  text-indent: -5000em;
+  overflow: hidden;
+  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/uclogo.png');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100%;
+  display: block;
+  height: 400px;
+  margin: 30px auto 0;
+  max-width: 450px;
+  min-width: 200px;
+  width: 100%;
+  position: relative;
 }
