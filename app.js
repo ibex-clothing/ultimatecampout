@@ -45,6 +45,16 @@ function removeOpenClasses(elems) {
   }
 }
 
+function refreshState(elems) {
+  for (var i=0;i<elems.length;i++) {
+    elems[i].classList.remove('active');
+  }
+}
+
+function cssActivate(elem) {
+  elem.classList.add('active');
+}
+
 window.onload = function() {
   var leftCurtain = document.getElementsByClassName('curtain__left')[0];
   var rightCurtain = document.getElementsByClassName('curtain__right')[0];
@@ -52,11 +62,16 @@ window.onload = function() {
   TweenLite.to(leftCurtain, 2, {left: "0%"});
 
   var prizeButtons = document.getElementsByClassName('prize-button');
+  var prizes = document.getElementsByClassName('prize');
+  var allPrizesButton = document.getElementsByClassName('prize-button-all')[0];
 
   for (var i = 0; i < prizeButtons.length; i++) {
     prizeButtons[i].addEventListener('click', function(event) {
-      var week = event.target.dataset.week;
-      var prizes = document.getElementsByClassName('prize');
+      refreshState(prizeButtons);
+      
+      var activeButton = event.target;
+      cssActivate(activeButton);
+      var week = activeButton.dataset.week;
 
       for(var i = 0; i < prizes.length; i++) {
         var prize = prizes[i];
@@ -66,10 +81,18 @@ window.onload = function() {
           prize.classList.remove('selected');
         }
       }
-
-      console.log('clicked open for ' + event.target.innerText);
     })
   }
+
+
+  allPrizesButton.addEventListener('click', function(event) {
+    refreshState(prizeButtons);
+    cssActivate(event.target);
+    for(var i = 0; i < prizes.length; i++) {
+      var prize = prizes[i];
+      prize.classList.add('selected');
+    }
+  });
 
 };
 

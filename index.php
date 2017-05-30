@@ -107,18 +107,78 @@ else {
       </div>
     </section>
 
+
+
     <section class="block__text">
       <div class="block__text-content">
         <h3>How to Enter</h3>
-        <h4>Weeks 1-3:</h4>
-        <p>Fill out the Ultimate Campout contest form and automatically be entered for three prize drawings. We’ll randomly select winners at the end of each week to hike away with that week’s prize package.</p>
-
-        <h4>Week 4:</h4>
-        <p>Once you’ve entered by filling out the Ultimate Campout contest form, you can start tagging your favorite campsites, best setups, and sharpest views on Instagram using hashtag <b>#ultimatecampout</b>. We’ll select and vote on the places that draw us the most, and award one lucky camper the “Camp One Collection” - a slew of prizes from our outdoor brand friends.</p>
+        <div class="week-desc">
+          <h4>Weeks 1-3:</h4>
+          <p>Fill out the Ultimate Campout contest form and automatically be entered for three prize drawings. We’ll randomly select winners at the end of each week to hike away with that week’s prize package.</p>
+        </div>
+        <div class="weeks-desc">
+          <h4>Week 4:</h4>
+          <p>Once you’ve entered by filling out the Ultimate Campout contest form, you can start tagging your favorite campsites, best setups, and sharpest views on Instagram using hashtag <a href="https://www.instagram.com/explore/tags/ultimatecampout/" target="_blank"><b>#ultimatecampout</b></a>. We’ll select and vote on the places that draw us the most, and award one lucky camper the “Camp One Collection” - a slew of prizes from our outdoor brand friends.</p>
+        </div>
 
         <p>Weekly winners will hike away with the best camping products on the market.</p>
 
-        <p>It’s camp season. Make each night outside amazing!</p>
+        <p class="slogan">It’s camp season. Make each night outside amazing!</p>
+      </div>
+    </section>
+
+    <a name="enter"></a>
+    <section class="block enter">
+      <div class="block__center">
+        <h3>Entry Form</h3>
+        <?php if($newinserted): ?>
+          <div>
+            <h3>Thank you!</h3>
+            <p>We have received your entry for our Ultimate Campout Giveaway.</p>
+            <p>The lucky winner will be notified by email on Friday, June 16.</p>
+          </div>
+        <?php else: ?>
+          <form method="post" action="" class="entry-form">
+            <?php if($search){
+              echo '<div class="alert">You already signed up for this contest!.</div>';
+            }?>
+            <div class="form-group">
+              <label>First Name<span class="required">*</span></label>
+              <div>
+                <input type="text" data-validate="notEmpty" class="form-control" name='firstname' value='<?=$search['name']['first'] ?>' />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Last Name<span class="required">*</span></label>
+              <div>
+                <input type="text" data-validate="notEmpty"  name='lastname' class="form-control" value='<?=$search['name']['last'] ?>' />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Zip<span class="required">*</span></label>
+              <div>
+                <input data-validate="zipCode" type="text" name='zip' class="form-control" value='<?=$search['address']['zip'] ?>' />
+              </div>
+            </div>
+
+            <?php if(!isset($_GET['unsubscribe'])): ?>
+              <div class="form-group">
+                <label>Email Address<span class="required">*</span></label>
+                <div>
+                  <input type="text" placeholder="sue@example.com" name='email' class="form-control" value='<?=$search['email'] ?>' />
+                  <small>Your email address will never be <a href="http://shop.ibex.com/ibex/privacy">mis-used</a>.</small>
+                  <small><a href="/terms.html">Terms &amp; Conditions</a></small>
+                </div>
+              </div>
+            <?php endif; ?>
+            <?php if($search){
+              echo "<input type='hidden' name='catid' value='".$search['_id']."'/>";
+            }?>
+            <div class="submit-container">
+              <input type="submit" id="submitbutton" class="bgbutton" value="<?=$submittext;?>">
+            </div>
+          </form>
+        <?php endif; ?>
       </div>
     </section>
 
@@ -133,6 +193,7 @@ else {
             <button class="prize-button" data-week="2">Week 2</button>
             <button class="prize-button" data-week="3">Week 3</button>
             <button class="prize-button" data-week="4">Week 4</button>
+            <button class="prize-button-all">All Prizes</button>
           </div>
 
           <div class="prize" data-prizeweek="1">
@@ -368,59 +429,7 @@ else {
     </section>
 
 
-    <a name="enter"></a>
-    <section class="block enter">
-      <div class="block__center">
-        <?php if($newinserted): ?>
-          <div>
-            <h3>Thank you!</h3>
-            <p>We have received your entry for our Ultimate Campout Giveaway.</p>
-            <p>The lucky winner will be notified by email on Friday, June 16.</p>
-          </div>
-        <?php else: ?>
-          <form method="post" action="" class="entry-form">
-            <?php if($search){
-              echo '<div class="alert">You already signed up for this contest!.</div>';
-            }?>
-            <div class="form-group">
-              <label>First Name<span class="required">*</span></label>
-              <div>
-                <input type="text" data-validate="notEmpty" class="form-control" name='firstname' value='<?=$search['name']['first'] ?>' />
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Last Name<span class="required">*</span></label>
-              <div>
-                <input type="text" data-validate="notEmpty"  name='lastname' class="form-control" value='<?=$search['name']['last'] ?>' />
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Zip<span class="required">*</span></label>
-              <div>
-                <input data-validate="zipCode" type="text" name='zip' class="form-control" value='<?=$search['address']['zip'] ?>' />
-              </div>
-            </div>
 
-            <?php if(!isset($_GET['unsubscribe'])): ?>
-              <div class="form-group">
-                <label>Email Address<span class="required">*</span></label>
-                <div>
-                  <input type="text" placeholder="sue@example.com" name='email' class="form-control" value='<?=$search['email'] ?>' />
-                  <small>Your email address will never be <a href="http://shop.ibex.com/ibex/privacy">mis-used</a>.</small>
-                  <small><a href="/terms.html">Terms &amp; Conditions</a></small>
-                </div>
-              </div>
-            <?php endif; ?>
-            <?php if($search){
-              echo "<input type='hidden' name='catid' value='".$search['_id']."'/>";
-            }?>
-            <div class="submit-container">
-              <input type="submit" id="submitbutton" class="bgbutton" value="<?=$submittext;?>">
-            </div>
-          </form>
-        <?php endif; ?>
-      </div>
-    </section>
 
     <section class="image-gallery">
       <!-- <section class="row instagram-container">
@@ -429,53 +438,57 @@ else {
       </section> -->
     </section>
 
-    <footer class="block__text partners">
+    <footer class="block__text partners logos">
       <div class="block__text-content">
         <h3>Partners</h3>
-        <div class="partner-logo">
-          <a href="http://shop.ibex.com/" target="_blank">
-            <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/DemerBox.jpg" alt="Ibex Logo"/>
-          </a>
+        <div class="platinum">
+          <div class="partner-logo">
+            <a href="http://shop.ibex.com/" target="_blank">
+              <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/ibex-logo.jpg" alt="Ibex Logo"/>
+            </a>
+          </div>
+          <div  class="partner-logo">
+            <a href="http://www.nemoequipment.com/" target="_blank">
+              <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/nemo.jpg" alt="Nemo Logo"/>
+            </a>
+          </div>
+          <div  class="partner-logo">
+            <a href="https://www.msrgear.com/" target="_blank">
+              <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/msr.jpg" alt="MSR Logo"/>
+            </a>
+          </div>
+          <div  class="partner-logo">
+            <a href="https://www.ospreypacks.com/us/en/" target="_blank">
+              <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/osprey-logo.jpg" alt="Osprey Logo"/>
+            </a>
+          </div>
+          <div  class="partner-logo">
+            <a href="http://www.rovrproducts.com/" target="_blank">
+              <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/rovr_logo.jpg" alt="ROVR Logo"/>
+            </a>
+          </div>
+          <div class="partner-logo">
+            <a href="https://demerbox.com/" target="_blank">
+              <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/DemerBox.jpg" alt="DemerBox Logo"/>
+            </a>
+          </div>
         </div>
-        <div class="partner-logo">
-          <a href="https://demerbox.com/" target="_blank">
-            <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/DemerBox.jpg" alt="DemerBox Logo"/>
-          </a>
-        </div>
-        <div  class="partner-logo">
-          <a href="https://goodto-go.com/" target="_blank">
-            <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/Good-To-Go-Logo.jpg" alt="Good To Go Logo"/>
-          </a>
-        </div>
-        <div  class="partner-logo">
-          <a href="https://www.msrgear.com/" target="_blank">
-            <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/msr.jpg" alt="MSR Logo"/>
-          </a>
-        </div>
-        <div  class="partner-logo">
-          <a href="http://www.nemoequipment.com/" target="_blank">
-            <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/nemo.jpg" alt="Nemo Logo"/>
-          </a>
-        </div>
-        <div  class="partner-logo">
-          <a href="http://theprobar.com/" target="_blank">
-            <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/probar.jpg" alt="ProBar Logo"/>
-          </a>
-        </div>
-        <div  class="partner-logo">
-          <a href="http://www.rovrproducts.com/" target="_blank">
-            <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/rovr_logo.jpg" alt="ROVR Logo"/>
-          </a>
-        </div>
-        <div  class="partner-logo">
-          <a href="http://www.ruffwear.com/" target="_blank">
-            <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/Ruffwear.jpg" alt="Ruffwear Logo"/>
-          </a>
-        </div>
-        <div  class="partner-logo">
-          <a href="https://www.ospreypacks.com/us/en/" target="_blank">
-            <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/Ruffwear.jpg" alt="Osprey Logo"/>
-          </a>
+        <div class="gold">
+          <div  class="partner-logo">
+            <a href="https://goodto-go.com/" target="_blank">
+              <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/Good-To-Go-Logo.jpg" alt="Good To Go Logo"/>
+            </a>
+          </div>
+          <div  class="partner-logo">
+            <a href="http://theprobar.com/" target="_blank">
+              <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/probar.jpg" alt="ProBar Logo"/>
+            </a>
+          </div>
+          <div  class="partner-logo">
+            <a href="http://www.ruffwear.com/" target="_blank">
+              <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/logos/Ruffwear.jpg" alt="Ruffwear Logo"/>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
