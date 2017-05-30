@@ -39,11 +39,38 @@ function isScrolledIntoView(el) {
     return isVisible;
 }
 
+function removeOpenClasses(elems) {
+  for (var i = 0; i < elems.length; i++) {
+    elems[i].classList.remove('open');
+  }
+}
+
 window.onload = function() {
   var leftCurtain = document.getElementsByClassName('curtain__left')[0];
   var rightCurtain = document.getElementsByClassName('curtain__right')[0];
   TweenLite.to(rightCurtain, 2, {right: "0%"});
   TweenLite.to(leftCurtain, 2, {left: "0%"});
+
+  var prizeButtons = document.getElementsByClassName('prize-button');
+
+  for (var i = 0; i < prizeButtons.length; i++) {
+    prizeButtons[i].addEventListener('click', function(event) {
+      var week = event.target.dataset.week;
+      var prizes = document.getElementsByClassName('prize');
+
+      for(var i = 0; i < prizes.length; i++) {
+        var prize = prizes[i];
+        if (prize.dataset.prizeweek.includes(week)) {
+          prize.classList.add('selected');
+        } else {
+          prize.classList.remove('selected');
+        }
+      }
+
+      console.log('clicked open for ' + event.target.innerText);
+    })
+  }
+
 };
 
 
@@ -52,8 +79,8 @@ window.onscroll = function (e) {
   var rightCurtain = document.getElementsByClassName('curtain__right')[0];
 
   if (isScrolledIntoView(leftCurtain)) {
-    TweenLite.to(rightCurtain, 2, {right: "-50%"});
-    TweenLite.to(leftCurtain, 2, {left: "-50%"});
+    TweenLite.to(rightCurtain, 2, {right: "-48%"});
+    TweenLite.to(leftCurtain, 2, {left: "-48%"});
   } else {
     TweenLite.to(rightCurtain, 2, {right: "0%"});
     TweenLite.to(leftCurtain, 2, {left: "0%"});
