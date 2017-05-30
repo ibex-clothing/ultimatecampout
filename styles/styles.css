@@ -50,6 +50,12 @@ a:hover {
   color: #c1542a;
 }
 
+hr {
+  color: #77d3ff;
+  border: none;
+  border-bottom: 5px solid #77d3ff;
+}
+
 #page {
   position: relative;
 }
@@ -315,18 +321,20 @@ header p {
 .prize {
   width: 200px;
   display: inline-block;
-  opacity: 0.5;
   text-align: center;
 }
 
-.prize-buttons {
-  text-align: center;
-  margin-top: 25px;
-  margin-bottom: 25px;
+.prize-week {
+  margin-bottom: 35px;
+  padding-bottom: 35px;
 }
 
-.prize-buttons span {
-  display: block;
+.prize-week:hover .prize img {
+  filter: none;
+}
+
+.prize-week:hover .prize span {
+  visibility: visible;
 }
 
 button, input[type="submit"] {
@@ -357,26 +365,14 @@ button:hover,button:active, input[type="submit"]:hover {
   background-color: #a4dfff;
 }
 
-.prize.selected {
-  opacity: 1;
-}
-
 .prize span {
-  display: none;
   text-align: center;
-}
-
-.prize.selected span {
-  display: block;
+  visibility: hidden;
 }
 
 .prize img {
   width: 100%;
-}
-
-.smoke {
-  opacity: 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  filter: grayscale(100%);
 }
 
 .form-group {
@@ -410,4 +406,64 @@ label {
 
 .weeks-desc {
   margin-top: 30px;
+}
+
+.video img {
+  width: 100%;
+}
+
+.video-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background:rgba(255,255,255, 0.9);
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+}
+
+.video-modal__inner {
+  margin: 0 auto;
+  width: 90%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 900px;
+  margin-top: 200px;
+}
+
+.video-modal.open {
+  display: block;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.modal-open-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-open,
+.modal-open:hover {
+  background: none;
+}
+
+.modal-open img {
+  width: 100px;
+}
+
+.modal-close {
+  float: right;
+  font-size: 20px;
+  width: 50px;
 }

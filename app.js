@@ -45,55 +45,28 @@ function removeOpenClasses(elems) {
   }
 }
 
-function refreshState(elems) {
-  for (var i=0;i<elems.length;i++) {
-    elems[i].classList.remove('active');
-  }
-}
-
-function cssActivate(elem) {
-  elem.classList.add('active');
-}
-
 window.onload = function() {
   var leftCurtain = document.getElementsByClassName('curtain__left')[0];
   var rightCurtain = document.getElementsByClassName('curtain__right')[0];
   TweenLite.to(rightCurtain, 2, {right: "0%"});
   TweenLite.to(leftCurtain, 2, {left: "0%"});
 
-  var prizeButtons = document.getElementsByClassName('prize-button');
-  var prizes = document.getElementsByClassName('prize');
-  var allPrizesButton = document.getElementsByClassName('prize-button-all')[0];
-
-  for (var i = 0; i < prizeButtons.length; i++) {
-    prizeButtons[i].addEventListener('click', function(event) {
-      refreshState(prizeButtons);
-      
-      var activeButton = event.target;
-      cssActivate(activeButton);
-      var week = activeButton.dataset.week;
-
-      for(var i = 0; i < prizes.length; i++) {
-        var prize = prizes[i];
-        if (prize.dataset.prizeweek.includes(week)) {
-          prize.classList.add('selected');
-        } else {
-          prize.classList.remove('selected');
-        }
-      }
-    })
-  }
+  var modalCloseButton = document.getElementsByClassName('modal-close')[0];
+  var modal = document.getElementsByClassName('video-modal')[0];
+  var modalOpenButton = document.getElementsByClassName('modal-open')[0];
 
 
-  allPrizesButton.addEventListener('click', function(event) {
-    refreshState(prizeButtons);
-    cssActivate(event.target);
-    for(var i = 0; i < prizes.length; i++) {
-      var prize = prizes[i];
-      prize.classList.add('selected');
-    }
+  modalCloseButton.addEventListener('click', function() {
+    modal.classList.remove('open');
   });
 
+  modal.addEventListener('click', function() {
+    modal.classList.remove('open');
+  });
+
+  modalOpenButton.addEventListener('click', function() {
+    modal.classList.add('open');
+  });
 };
 
 
