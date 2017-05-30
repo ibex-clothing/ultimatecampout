@@ -9,7 +9,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-button {
+button,
+input {
   font-family: "Gotham Narrow A", "Gotham Narrow B", Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -282,16 +283,28 @@ iframe {
 .prize-buttons {
   text-align: center;
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 
-.prize-button {
+.prize-buttons span {
+  display: block;
+}
+
+button, input[type="submit"] {
   background-color: yellow;
   border: none;
   padding: 15px;
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-size: 14px;
+  font-weight: 700;
+  color: #323232;
+}
+
+button:hover,button:active, input[type="submit"]:hover {
+  background-color: #b1b184;
 }
 
 .prize.selected {
@@ -314,4 +327,28 @@ iframe {
 .smoke {
   opacity: 0;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group {
+}
+
+input {
+  width: 100%;
+  margin-bottom: 15px;
+  height: 40px;
+  padding-right: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.entry-form {
+  width: 100%;
+  max-width: 420px;
 }

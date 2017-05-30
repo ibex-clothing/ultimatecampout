@@ -127,6 +127,13 @@ else {
         <h3>Prizes</h3>
 
         <div class="prize-container">
+          <div class="prize-buttons">
+            <span>Select a week to see prizes</span>
+            <button class="prize-button" data-week="1">Week 1</button>
+            <button class="prize-button" data-week="2">Week 2</button>
+            <button class="prize-button" data-week="3">Week 3</button>
+            <button class="prize-button" data-week="4">Week 4</button>
+          </div>
 
           <div class="prize" data-prizeweek="1">
             <a href="http://www.nemoequipment.com/product/?p=Fillo%20Luxury%20(Moss%20Green)" target="_blank">
@@ -193,8 +200,10 @@ else {
           </div>
 
           <div class="prize" data-prizeweek="2">
-            <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/msrcook.png" data-week="2" alt="MSR Pocket Rocket Stove Kit">
-            <span>MSR Pocket Rocket Stove Kit</span>
+            <a href="https://www.msrgear.com/stoves/pocketrocket-stove-kit" target="_blank">
+              <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/msrcook.png" data-week="2" alt="MSR Pocket Rocket Stove Kit">
+              <span>MSR Pocket Rocket Stove Kit</span>
+            </a>
           </div>
 
           <div class="prize" data-prizeweek="24">
@@ -295,15 +304,7 @@ else {
             </a>
           </div>
 
-
-
-
-
-
-
 <!--
-
-
 
           <div class="prize open">
             <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/Week1.jpg" alt="Week 1 Prizes" class="prize-image"/>
@@ -362,14 +363,6 @@ else {
             </ul>
           </div> -->
           <div class="smoke"></div>
-
-
-          <div class="prize-buttons">
-            <button class="prize-button" data-week="1">Week 1</button>
-            <button class="prize-button" data-week="2">Week 2</button>
-            <button class="prize-button" data-week="3">Week 3</button>
-            <button class="prize-button" data-week="4">Week 4</button>
-          </div>
         </div>
       </div>
     </section>
