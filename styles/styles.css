@@ -78,6 +78,7 @@ hr {
 
 #page {
   position: relative;
+  overflow: hidden;
 }
 
 @keyframes b {
@@ -89,22 +90,6 @@ hr {
   }
 }
 
-@keyframes fill_change {
-  0%  {fill: #fffdd4;}
-  30%	{fill: #77d3ff;}
-  50%	{fill: #77d3ff;}
-  70% {fill: #fffdd4;}
-  100% {fill: #fffdd4;}
-}
-
-@keyframes color_change {
-  0%  {color: #fffdd4;}
-  30%	{color: #77d3ff;}
-  50%	{color: #77d3ff;}
-  70% {color: #fffdd4;}
-  100% {color: #fffdd4;}
-}
-
 .block {
   width: 100%;
   height: 60vh;
@@ -112,16 +97,14 @@ hr {
   position: relative;
   overflow: hidden;
   background-color: #fe7d3a;
-  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/rainbow-panel.png');
   box-sizing: border-box;
-  background-position: 50%;
-  background-size: contain;
   border: 30px solid #fffdd4;
 }
 
 .block__top {
   height: 100vw;
-  max-height: 100vh;
+  max-height: 1054px;
+  min-height: 640px;
   overflow: hidden;
   background-position: 50%;
 }
@@ -133,6 +116,22 @@ header {
 header h1, header h2 {
   margin: 0;
   color: #ffffff;
+}
+
+.logo {
+  text-indent: -5000em;
+  overflow: hidden;
+  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/uclogo.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  display: block;
+  height: 20vw;
+  max-height: 400px;
+  margin: 10px auto 30px;
+  min-width: 200px;
+  width: 100%;
+  position: relative;
 }
 
 header h2 {
@@ -263,18 +262,13 @@ header p {
   left: 0;
   top: 0;
   position: absolute;
-  background-image: url(http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/hero-background.png);
-  background-position: center;
-  background-size: 150vw;
+  background-color: #77d3ff;
+  background-image: url(http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/hero.png);
+  background-position: top;
   background-repeat: no-repeat;
-  width: 150vw;
-  margin-top: -25vw;
-  margin-left: -25vw;
-  height: 150vw;
-  animation-name: b;
-  animation-timing-function: linear;
-  animation-duration: 30s;
-  animation-iteration-count: infinite;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-midground {
@@ -292,13 +286,14 @@ header p {
 
 .hero-header {
   position: absolute;
-  top: 150px;
+  top: 180px;
   width: 100%;
 }
 
 .hero-copy {
   position: absolute;
-  bottom: 50px;
+  bottom: 0;
+  padding-bottom: 50px;
 }
 
 .contest-details {
@@ -310,21 +305,6 @@ header p {
   text-align: center;
   padding: 20px 0;
 }
-
-/*.logo {
-  text-indent: -5000em;
-  overflow: hidden;
-  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/logo.svg');
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: contain;
-  display: block;
-  height: 400px;
-  margin: 10px auto 30px
-  min-width: 200px;
-  width: 100%;
-  position: relative;
-}*/
 
 .curtain {
   width: 100%;
@@ -602,42 +582,17 @@ label {
   display: inline-block;
 }
 
-.st203{
-  fill: #fffdd4;
-  -webkit-animation: fill_change 30s linear infinite;
-  -moz-animation: fill_change 30s linear infinite;
-  -ms-animation: fill_change 30s linear infinite;
-  -o-animation: fill_change 30s linear infinite;
-  animation: fill_change 30s linear infinite;
-}
-
-.pre-title,
-.contest-details {
-  color: #fffdd4;
-  -webkit-animation: color_change 30s linear infinite;
-  -moz-animation: color_change 30s linear infinite;
-  -ms-animation: color_change 30s linear infinite;
-  -o-animation: color_change 30s linear infinite;
-  animation: color_change 30s linear infinite;
-}
-
 @media only screen and (max-width : 768px) {
   .block {
-    min-height: 650px;
     border: none;
-    padding: 10px;
-  }
-
-  .block.enter {
-    min-height: 560px;
   }
 
   .logo {
     height: 160px;
   }
 
-  .block__center-content,
-  .block__text-content {
+  .block__text-content,
+  .block__center-content {
     width: 90%;
   }
 
@@ -647,7 +602,7 @@ label {
   }
 
   .block__top {
-    padding-top: 180px;
+    min-height: 780px;
   }
 
   .block__top span {
@@ -686,5 +641,9 @@ label {
 
   .prizes, .logos {
     border: none;
+  }
+
+  .hero-midground {
+    top: 360px;
   }
 }
