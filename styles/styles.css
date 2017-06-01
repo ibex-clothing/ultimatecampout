@@ -24,11 +24,16 @@ h1, h2, h3 {
 h1 {
   font-size: 3.157rem;
   margin-bottom: 40px;
+}
 
+h1 span.title {
+  display: none;
 }
 
 h2 {
   font-size: 2.369em;
+  color: #fe7d3a;
+  letter-spacing: 2.5px;
 }
 
 p {
@@ -38,22 +43,37 @@ p {
 
 iframe {
   width: 100%;
-  height: 36vw;
+  height: 50vw;
+  max-height: 505px;
 }
 
 a {
   overflow: hidden;
-  color: #f96c35;
+  color: #fe7d3a;
 }
 
 a:hover {
-  color: #c1542a;
+  color: #47a3dc;
 }
 
 hr {
-  color: #77d3ff;
+  color: #47a3dc;
   border: none;
-  border-bottom: 5px solid #77d3ff;
+  border-bottom: 5px solid #47a3dc;
+}
+
+.headline-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.headline-wrapper h2 {
+  color: #fe7d3a;
+  letter-spacing: 2.5px;
+  border: 6px solid #fe7d3a;
+  display: inline-block;
+  padding: 9px 17px;
+  background-color: #ffffff;
 }
 
 #page {
@@ -69,20 +89,39 @@ hr {
   }
 }
 
+@keyframes fill_change {
+  0%  {fill: #fffdd4;}
+  30%	{fill: #77d3ff;}
+  50%	{fill: #77d3ff;}
+  70% {fill: #fffdd4;}
+  100% {fill: #fffdd4;}
+}
+
+@keyframes color_change {
+  0%  {color: #fffdd4;}
+  30%	{color: #77d3ff;}
+  50%	{color: #77d3ff;}
+  70% {color: #fffdd4;}
+  100% {color: #fffdd4;}
+}
+
 .block {
   width: 100%;
   height: 60vh;
   min-height: 800px;
   position: relative;
   overflow: hidden;
-  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/background-bars.jpg');
+  background-color: #fe7d3a;
+  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/rainbow-panel.png');
   box-sizing: border-box;
   background-position: 50%;
-  border: 30px solid #f5f5f5;
+  background-size: contain;
+  border: 30px solid #fffdd4;
 }
 
 .block__top {
-  height: 94vh;
+  height: 100vw;
+  max-height: 100vh;
   overflow: hidden;
   background-position: 50%;
 }
@@ -93,6 +132,7 @@ header {
 
 header h1, header h2 {
   margin: 0;
+  color: #ffffff;
 }
 
 header h2 {
@@ -105,7 +145,7 @@ header p {
 
 .block__text,
 .block__alt {
-  background: #f5f5f5;
+  background: #fffdd4;
 }
 
 .block__alt {
@@ -123,18 +163,12 @@ header p {
 }
 
 .block__content {
-  -ms-flex-direction: column;
-  flex-direction: column;
-  display: -ms-flexbox;
-  display: flex;
+  position: absolute;
+  width: 100%;
   height: 100%;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
-.block__prize-content {
+.block__full-content {
   margin-left: auto;
   margin-right: auto;
   max-width: 1024px;
@@ -143,7 +177,9 @@ header p {
 }
 
 .block__center-content {
+  position: relative;
   text-align: center;
+  height: 100%;
 }
 
 .block__center-content,
@@ -187,8 +223,8 @@ header p {
   align-items: center;
 }
 
-.enter-link span {
-  z-index: 100;
+.enter-link .text {
+  z-index: 102;
 }
 
 .turning {
@@ -199,7 +235,7 @@ header p {
   left: 0;
   top: 0;
   position: absolute;
-  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/spinning-circle.png');
+  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/sky.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -207,6 +243,62 @@ header p {
   animation-timing-function: linear;
   animation-duration: 10s;
   animation-iteration-count: infinite;
+}
+
+.enter-link .foreground {
+  z-index: 101;
+  display: block;
+  width: 150px;
+  height: 150px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/foreground-blank.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hero-background {
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-image: url(http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/hero-background.png);
+  background-position: center;
+  background-size: 150vw;
+  background-repeat: no-repeat;
+  width: 150vw;
+  margin-top: -25vw;
+  margin-left: -25vw;
+  height: 150vw;
+  animation-name: b;
+  animation-timing-function: linear;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+.hero-midground {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 53vh;
+  position: absolute;
+  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/hero-mountains.png');
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+.hero-header {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+}
+
+.hero-copy {
+  position: absolute;
+  bottom: 50px;
 }
 
 .contest-details {
@@ -219,23 +311,24 @@ header p {
   padding: 20px 0;
 }
 
-.logo {
+/*.logo {
   text-indent: -5000em;
   overflow: hidden;
-  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/uclogo.png');
+  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/logo.svg');
   background-repeat: no-repeat;
   background-position: 50%;
-  background-size: 100%;
+  background-size: contain;
   display: block;
   height: 400px;
   margin: 10px auto 30px
   min-width: 200px;
   width: 100%;
   position: relative;
-}
+}*/
 
 .curtain {
-  width: 80%;
+  width: 100%;
+  max-width: 1024px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
@@ -247,17 +340,19 @@ header p {
   width: 50%;
   height: 100%;
   position: absolute;
-  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/curtain.png');
+  background-size: 100%;
 }
 
 .curtain__left {
   background-position: 100% 0;
   left: -48%;
+  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/tent-left.jpg');
 }
 
 .curtain__right {
   background-position: 0 0;
   right: -48%;
+  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/tent-right.jpg');
 }
 
 .block__top span {
@@ -308,6 +403,7 @@ header p {
 
 .prizes, .logos {
   background-color: #ffffff;
+  border: 30px solid #fffdd4;
 }
 
 .prizes a {
@@ -322,23 +418,48 @@ header p {
   width: 200px;
   display: inline-block;
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 30px;
 }
 
 .prize-week {
+  position: relative;
   margin-bottom: 35px;
   padding-bottom: 35px;
+  padding-top: 35px;
 }
 
-.prize-week:hover .prize img {
-  filter: none;
+.prize-week h3 {
+  color: #fe7d3a;
+  letter-spacing: 1px;
 }
 
-.prize-week:hover .prize span {
-  visibility: visible;
+.prize-sticker {
+  position: absolute;
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+  color: #fffdd4;
+  background-color: #47a3dc;
+  transform: rotate(24deg);
+}
+
+.prize-sticker span {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding-top: 32px;
+  display: block;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 button, input[type="submit"] {
-  background-color: #77d3ff;
+  background-color: #fe7d3a;
   border: none;
   padding: 15px;
   margin-top: 10px;
@@ -367,12 +488,11 @@ button:hover,button:active, input[type="submit"]:hover {
 
 .prize span {
   text-align: center;
-  visibility: hidden;
+  font-weight: 700;
 }
 
 .prize img {
   width: 100%;
-  filter: grayscale(100%);
 }
 
 .form-group {
@@ -385,6 +505,7 @@ input {
   padding-right: 10px;
   padding-left: 10px;
   box-sizing: border-box;
+  border: 1px solid #77d3ff;
 }
 
 label {
@@ -466,4 +587,104 @@ label {
   float: right;
   font-size: 20px;
   width: 50px;
+}
+
+.photo-tiles {
+  text-align: center;
+}
+
+.photo-tile {
+  width: 250px;
+  padding: 10px;
+}
+
+.thumbnail {
+  display: inline-block;
+}
+
+.st203{
+  fill: #fffdd4;
+  -webkit-animation: fill_change 30s linear infinite;
+  -moz-animation: fill_change 30s linear infinite;
+  -ms-animation: fill_change 30s linear infinite;
+  -o-animation: fill_change 30s linear infinite;
+  animation: fill_change 30s linear infinite;
+}
+
+.pre-title,
+.contest-details {
+  color: #fffdd4;
+  -webkit-animation: color_change 30s linear infinite;
+  -moz-animation: color_change 30s linear infinite;
+  -ms-animation: color_change 30s linear infinite;
+  -o-animation: color_change 30s linear infinite;
+  animation: color_change 30s linear infinite;
+}
+
+@media only screen and (max-width : 768px) {
+  .block {
+    min-height: 650px;
+    border: none;
+    padding: 10px;
+  }
+
+  .block.enter {
+    min-height: 560px;
+  }
+
+  .logo {
+    height: 160px;
+  }
+
+  .block__center-content,
+  .block__text-content {
+    width: 90%;
+  }
+
+  header h2 {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+
+  .block__top {
+    padding-top: 180px;
+  }
+
+  .block__top span {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  header p {
+    font-size: 16px;
+  }
+
+  .curtain__left, .curtain__right {
+    display: none;
+  }
+
+  .block__curtain {
+    width: 100%;
+    padding: 0;
+  }
+
+  .curtain {
+    width: 100%;
+  }
+
+  .prize {
+    width: 49%;
+  }
+
+  .video-modal__inner {
+    margin-top: 85px;
+  }
+
+  .modal-open img {
+    width: 60px;
+  }
+
+  .prizes, .logos {
+    border: none;
+  }
 }
