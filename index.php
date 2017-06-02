@@ -116,7 +116,7 @@ else {
               <span>Unbelievable views?</span>
               <p>We’re on the hunt for exactly that, and to help you with your quest we’re giving away some of the best camping products in the outdoor industry.</p>
             </div>
-            <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/tent.png" alt="tent" />
+            <img class="tent-graphic" src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/tent.png" alt="tent" />
           </div>
         </div>
       </div>
