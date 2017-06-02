@@ -28,8 +28,9 @@ function insertRandomImages() {
 function isScrolledIntoView(el) {
     var elemTop = el.getBoundingClientRect().top;
     var elemBottom = el.getBoundingClientRect().bottom;
+    var offset = 200;
 
-    var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+    var isVisible = (elemTop >= -offset) && (elemBottom <= window.innerHeight + offset);
     return isVisible;
 }
 
@@ -42,8 +43,11 @@ function removeOpenClasses(elems) {
 window.onload = function() {
   var leftCurtain = document.getElementsByClassName('curtain__left')[0];
   var rightCurtain = document.getElementsByClassName('curtain__right')[0];
-  TweenLite.to(rightCurtain, 2, {right: "0%"});
-  TweenLite.to(leftCurtain, 2, {left: "0%"});
+
+  if (!isScrolledIntoView(leftCurtain)) {
+    TweenLite.to(rightCurtain, 2, {right: "0%"});
+    TweenLite.to(leftCurtain, 2, {left: "0%"});
+  }
 
   var modalCloseButton = document.getElementsByClassName('modal-close')[0];
   var modal = document.getElementsByClassName('video-modal')[0];

@@ -58,6 +58,23 @@ else {
   <title>Ultimate Campout Contest</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6961376/7346172/css/fonts.css" />
   <link rel="stylesheet" type="text/css" href="styles/normalize.css" />
   <link rel="stylesheet" type="text/css" href="styles/styles.css" />
@@ -75,7 +92,9 @@ else {
         <span class="text">Enter Now!</span>
       </a>
       <div class="block block__top">
-        <div class="hero-background"></div>
+        <div class="hero-background-wrapper">
+          <div class="hero-background"></div>
+        </div>
         <div class="block__content">
           <div class="contest-details">
             <span>June 2 - 30, 2017</span>
@@ -147,10 +166,10 @@ else {
           <div>
             <h3>Thank you!</h3>
             <p>We have received your entry for our Ultimate Campout Giveaway.</p>
-            <p>The lucky winner will be notified by email on Friday, June 16.</p>
+            <p>Winners will be notified via email.</p>
           </div>
         <?php else: ?>
-          <form method="post" action="" class="entry-form">
+          <form method="post" action="/#enter" class="entry-form">
             <?php if($search){
               echo '<div class="alert">You already signed up for this contest!.</div>';
             }?>
@@ -298,6 +317,14 @@ else {
                 <span>NEMO Helio Pressure Shower</span>
               </a>
             </div>
+            <div class="prize">
+              <a href="https://www.ospreypacks.com/us/en/product/stratos-34-STRATOS34_750.html" target="_blank">
+                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/ospreystaros.png" alt="Osprey Packs Stratos 34">
+                <span>Osprey Packs Stratos 34</span>
+              </a>
+            </div>
+
+
           </article>
           <hr/>
           <article class="prize-week">
@@ -364,7 +391,7 @@ else {
           <article class="prize-week">
             <h3>Week 4, The "Camp One Collection"</h3>
             <div class="prize-sticker">
-              <span>Winner Announced Saturday,<br> July 15</span>
+              <span>Winner Announced Friday,<br> July 14</span>
             </div>
             <div class="prize">
               <a href="https://www.msrgear.com/catalog/product/view/id/16140/s/windburner/category/5/" target="_blank">
@@ -497,7 +524,7 @@ else {
   <div class="video-modal">
     <div class="video-modal__inner">
       <button class="modal-close">x</button>
-      <iframe src="https://player.vimeo.com/video/203586797" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/217532130" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
   </div>
   <script src="app.js"></script>

@@ -70,10 +70,8 @@ hr {
 .headline-wrapper h2 {
   color: #fe7d3a;
   letter-spacing: 2.5px;
-  border: 6px solid #fe7d3a;
   display: inline-block;
   padding: 9px 17px;
-  background-color: #ffffff;
 }
 
 #page {
@@ -162,9 +160,19 @@ header p {
 }
 
 .block__content {
-  position: absolute;
-  width: 100%;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -ms-flexbox;
+  display: flex;
   height: 100%;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.hero-copy {
+  color: #505050;
 }
 
 .block__full-content {
@@ -178,7 +186,6 @@ header p {
 .block__center-content {
   position: relative;
   text-align: center;
-  height: 100%;
 }
 
 .block__center-content,
@@ -258,17 +265,24 @@ header p {
   background-repeat: no-repeat;
 }
 
-.hero-background {
+.hero-background-wrapper {
+  position: absolute;
   left: 0;
   top: 0;
-  position: absolute;
+  width: 100%;
+  height: 100%;
   background-color: #77d3ff;
+}
+
+.hero-background {
   background-image: url(http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/hero.png);
   background-position: top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   width: 100%;
   height: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .hero-midground {
@@ -285,15 +299,8 @@ header p {
 }
 
 .hero-header {
-  position: absolute;
   top: 180px;
   width: 100%;
-}
-
-.hero-copy {
-  position: absolute;
-  bottom: 0;
-  padding-bottom: 50px;
 }
 
 .contest-details {
@@ -532,7 +539,7 @@ label {
   right: 0;
   bottom: 0;
   max-width: 900px;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .video-modal.open {
