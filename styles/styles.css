@@ -331,6 +331,10 @@ header h2 {
   width: 80%;
 }
 
+.hero-copy p, .hero-copy span {
+  opacity: 0;
+}
+
 .contest-details {
   position: absolute;
   top: 20px;

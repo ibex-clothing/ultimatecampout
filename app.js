@@ -40,6 +40,13 @@ function removeOpenClasses(elems) {
   }
 }
 
+function tweenIntroContent() {
+  var introContent = document.getElementsByClassName('hero-copy')[0].children;
+  for (var i = 0; i < introContent.length; i++) {
+    TweenLite.to(introContent[i], .5, {delay: (i * .5), opacity: 1});
+  }
+}
+
 window.onload = function() {
   var leftCurtain = document.getElementsByClassName('curtain__left')[0];
   var rightCurtain = document.getElementsByClassName('curtain__right')[0];
@@ -74,6 +81,9 @@ window.onload = function() {
   });
 
   insertRandomImages();
+  tweenIntroContent();
+
+
 };
 
 
