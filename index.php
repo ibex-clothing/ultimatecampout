@@ -167,7 +167,7 @@ else {
     <section class="block enter">
       <div class="block__center mountain-background">
         <?php if($newinserted): ?>
-          <div>
+          <div class="post-signup">
             <h3>Thank you!</h3>
             <p>We have received your entry for our Ultimate Campout Giveaway.</p>
             <p>Winners will be notified via email.</p>

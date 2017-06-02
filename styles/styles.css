@@ -365,13 +365,13 @@ header h2 {
 .curtain__left {
   background-position: 100% 0;
   left: -48%;
-  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/tent-left.jpg');
+  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/tent-left.png');
 }
 
 .curtain__right {
   background-position: 0 0;
   right: -48%;
-  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/tent-right.jpg');
+  background-image: url('http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/tent-right.png');
 }
 
 .block__top span {
@@ -394,6 +394,7 @@ header h2 {
 
 .entry-form small {
   display: block;
+  text-align: center;
 }
 
 .partners {
@@ -620,9 +621,29 @@ label {
   display: inline-block;
 }
 
+.post-signup {
+  height: 360px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.alert {
+  text-align: center;
+  font-weight: 700;
+  padding-bottom: 20px;
+  color: #fe7d3a;
+}
+
 @media only screen and (max-width : 768px) {
   .block {
     border: none;
+  }
+
+  .enter-link {
+    position: absolute;
   }
 
   .logo {
