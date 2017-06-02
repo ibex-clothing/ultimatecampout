@@ -93,7 +93,8 @@ else {
       </a>
       <div class="block block__top">
         <div class="hero-background-wrapper">
-          <div class="hero-background"></div>
+          <div class="stars"></div>
+          <div class="mountain"></div>
         </div>
         <div class="block__content">
           <div class="contest-details">
@@ -106,6 +107,8 @@ else {
                 <span class="title">Ultimate Campout</span>
               </h1>
             </div>
+          </div>
+          <div class="contest-intro">
             <div class="hero-copy">
               <span>Well-placed tents?</span>
               <span>Flawless campfires?</span>
@@ -113,6 +116,7 @@ else {
               <span>Unbelievable views?</span>
               <p>We’re on the hunt for exactly that, and to help you with your quest we’re giving away some of the best camping products in the outdoor industry.</p>
             </div>
+            <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/graphics/tent.png" alt="tent" />
           </div>
         </div>
       </div>
@@ -161,7 +165,7 @@ else {
 
     <a name="enter"></a>
     <section class="block enter">
-      <div class="block__center">
+      <div class="block__center mountain-background">
         <?php if($newinserted): ?>
           <div>
             <h3>Thank you!</h3>
@@ -226,47 +230,49 @@ else {
             <div class="prize-sticker">
               <span>Winner Announced Friday,<br> June 9</span>
             </div>
-            <div class="prize">
-              <a href="http://www.nemoequipment.com/product/?p=Fillo%20Luxury%20(Moss%20Green)" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/fillopillow.png" alt="NEMO Fillo Luxury">
-                <span>NEMO Fillo Luxury</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://shop.theprobar.com/Products/PROBAR-Variety-Packs" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/probar.png" alt="Pro Bar Variety Pack">
-                <span>Pro Bar Variety Pack</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://shop.ibex.com/merino-wool-clothing/mens-short-sleeve-shirts/m-w2-sport-t" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/ibextee.png" alt="Ibex W2 Sport T">
-                <span>Ibex W2 Sport T</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="https://www.msrgear.com/catalog/product/view/id/16277/s/autoflow-gravity-filter/category/7/" target="_blank" alt="MSR AutoFlow Gravity Filter 2L">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/msr2l.png">
-                <span>MSR AutoFlow Gravity Filter 2L</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://www.ruffwear.com/Bivy-Bowl-Collapsible-Dog-Bowl_2?sc=2&category=10" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/ruffwearbowl.png" alt="Ruffwear Bivy Bowl">
-                <span>Ruffwear Bivy Bowl</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="https://goodto-go.com/shop/" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/GTG%20Variety.png" alt="Good To-Go Variety">
-                <span>Good To-Go Variety</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="https://www.ospreypacks.com/us/en/product/daylite-DAYLITE_662.html" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/osprey.png" alt="Osprey Packs Daylite">
-                <span>Osprey Packs Daylite</span>
-              </a>
+            <div class="prize-container">
+              <div class="prize">
+                <a href="http://www.nemoequipment.com/product/?p=Fillo%20Luxury%20(Moss%20Green)" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/fillopillow.png" alt="NEMO Fillo Luxury">
+                  <span>NEMO Fillo Luxury</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://shop.theprobar.com/Products/PROBAR-Variety-Packs" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/probar.png" alt="Pro Bar Variety Pack">
+                  <span>Pro Bar Variety Pack</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://shop.ibex.com/merino-wool-clothing/mens-short-sleeve-shirts/m-w2-sport-t" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/ibextee.png" alt="Ibex W2 Sport T">
+                  <span>Ibex W2 Sport T</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="https://www.msrgear.com/catalog/product/view/id/16277/s/autoflow-gravity-filter/category/7/" target="_blank" alt="MSR AutoFlow Gravity Filter 2L">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/msr2l.png">
+                  <span>MSR AutoFlow Gravity Filter 2L</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://www.ruffwear.com/Bivy-Bowl-Collapsible-Dog-Bowl_2?sc=2&category=10" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/ruffwearbowl.png" alt="Ruffwear Bivy Bowl">
+                  <span>Ruffwear Bivy Bowl</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="https://goodto-go.com/shop/" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/GTG%20Variety.png" alt="Good To-Go Variety">
+                  <span>Good To-Go Variety</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="https://www.ospreypacks.com/us/en/product/daylite-DAYLITE_662.html" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/osprey.png" alt="Osprey Packs Daylite">
+                  <span>Osprey Packs Daylite</span>
+                </a>
+              </div>
             </div>
           </article>
           <hr/>
@@ -275,56 +281,56 @@ else {
             <div class="prize-sticker">
               <span>Winner Announced Friday,<br> June 16</span>
             </div>
-            <div class="prize">
-              <a href="http://shop.theprobar.com/Products/PROBAR-Variety-Packs" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/probar.png" alt="Pro Bar Variety Pack">
-                <span>Pro Bar Variety Pack</span>
-              </a>
+            <div class="prize-container">
+              <div class="prize">
+                <a href="http://shop.theprobar.com/Products/PROBAR-Variety-Packs" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/probar.png" alt="Pro Bar Variety Pack">
+                  <span>Pro Bar Variety Pack</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="https://www.msrgear.com/stoves/pocketrocket-stove-kit" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/msrcook.png" alt="MSR Pocket Rocket Stove Kit">
+                  <span>MSR Pocket Rocket Stove Kit</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="https://goodto-go.com/shop/" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/GTG%20Variety.png" alt="Good To-Go Variety">
+                  <span>Good To-Go Variety</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://www.ruffwear.com/Bivy-Bowl-Collapsible-Dog-Bowl_2?sc=2&category=10" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/ruffwearbowl.png" alt="Ruffwear Bivy Bowl">
+                  <span>Ruffwear Bivy Bowl</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://www.ruffwear.com/Highlands-Bed-Dog-Bed?sc=2&category=17" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/ruffwearbed.png" alt="Ruffwear Highlands Bed">
+                  <span>Ruffwear Highlands Bed</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://shop.ibex.com/merino-wool-clothing/accessories-hats-gloves-bags/indie-sleep-sack" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/ibexsleepsack.png" alt="Ibex Indie Sleep Sack">
+                  <span>Ibex Indie Sleep Sack</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://www.nemoequipment.com/product/?p=Helio%20Pressure%20Shower%20(Ocean)" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/helios.png" alt="NEMO Helio Pressure Shower">
+                  <span>NEMO Helio Pressure Shower</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="https://www.ospreypacks.com/us/en/product/stratos-34-STRATOS34_750.html" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/ospreystaros.png" alt="Osprey Packs Stratos 34">
+                  <span>Osprey Packs Stratos 34</span>
+                </a>
+              </div>
             </div>
-            <div class="prize">
-              <a href="https://www.msrgear.com/stoves/pocketrocket-stove-kit" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/msrcook.png" alt="MSR Pocket Rocket Stove Kit">
-                <span>MSR Pocket Rocket Stove Kit</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="https://goodto-go.com/shop/" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/GTG%20Variety.png" alt="Good To-Go Variety">
-                <span>Good To-Go Variety</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://www.ruffwear.com/Bivy-Bowl-Collapsible-Dog-Bowl_2?sc=2&category=10" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/ruffwearbowl.png" alt="Ruffwear Bivy Bowl">
-                <span>Ruffwear Bivy Bowl</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://www.ruffwear.com/Highlands-Bed-Dog-Bed?sc=2&category=17" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/ruffwearbed.png" alt="Ruffwear Highlands Bed">
-                <span>Ruffwear Highlands Bed</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://shop.ibex.com/merino-wool-clothing/accessories-hats-gloves-bags/indie-sleep-sack" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/ibexsleepsack.png" alt="Ibex Indie Sleep Sack">
-                <span>Ibex Indie Sleep Sack</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://www.nemoequipment.com/product/?p=Helio%20Pressure%20Shower%20(Ocean)" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/helios.png" alt="NEMO Helio Pressure Shower">
-                <span>NEMO Helio Pressure Shower</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="https://www.ospreypacks.com/us/en/product/stratos-34-STRATOS34_750.html" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/ospreystaros.png" alt="Osprey Packs Stratos 34">
-                <span>Osprey Packs Stratos 34</span>
-              </a>
-            </div>
-
-
           </article>
           <hr/>
           <article class="prize-week">
@@ -332,59 +338,61 @@ else {
             <div class="prize-sticker">
               <span>Winner Announced Friday,<br> June 23</span>
             </div>
-            <div class="prize">
-              <a href="http://www.nemoequipment.com/product/?p=Rhumba%2030%20Reg" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week3/sleepingbag.png" alt="NEMO Rhumba Spoon Shaped 650 Fill Power DownTek Sleeping Bag">
-                <span>NEMO Rhumba Spoon Shaped 650 Fill Power DownTek Sleeping Bag</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://www.nemoequipment.com/product/?p=Galaxi%203P%20(Birch%20Leaf%20Green)%20%26%20Footprint" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week3/tent.png" alt="NEMO Galaxi 3P Backpacking Tent &amp; Footprint">
-                <span>NEMO Galaxi 3P Backpacking Tent &amp; Footprint</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="https://demerbox.com/" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week3/demerbox.png" alt="DEMERBOX Bluetooth Speaker">
-                <span>DEMERBOX Bluetooth Speaker</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="https://www.msrgear.com/stoves/whisperlite-universal" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week3/msr.png"  alt="MSR WhisperLite Universal (fuel bottles not included)">
-                <span>MSR WhisperLite Universal (fuel bottles not included)</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="https://www.msrgear.com/cookware/ceramic-2-pot-set" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week3/msrgtgg2.png" alt="MSR Ceramic 2-Pot Set">
-                <span>MSR Ceramic 2-Pot Set</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="https://goodto-go.com/shop/" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/GTG%20Variety.png" alt="Good To-Go Variety">
-                <span>Good To-Go Variety</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://shop.ibex.com/merino-wool-clothing/womens-short-sleeve-shirts/w-w2-kinetic-t" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week3/ibexwomenstee.png" alt="Ibex W’s Kinetic T">
-                <span>Ibex W’s Kinetic T</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="https://www.ospreypacks.com/us/en/product/aether-ag-70-AETHER70_807.html" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week3/ospreyorange.png" alt="Osprey Packs Aether AG 70">
-                <span>Osprey Packs Aether AG 70</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://shop.theprobar.com/Products/PROBAR-Variety-Packs" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/probar.png" alt="Pro Bar Variety Pack">
-                <span>Pro Bar Variety Pack</span>
-              </a>
+            <div class="prize-container">
+              <div class="prize">
+                <a href="http://www.nemoequipment.com/product/?p=Rhumba%2030%20Reg" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week3/sleepingbag.png" alt="NEMO Rhumba Spoon Shaped 650 Fill Power DownTek Sleeping Bag">
+                  <span>NEMO Rhumba Spoon Shaped 650 Fill Power DownTek Sleeping Bag</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://www.nemoequipment.com/product/?p=Galaxi%203P%20(Birch%20Leaf%20Green)%20%26%20Footprint" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week3/tent.png" alt="NEMO Galaxi 3P Backpacking Tent &amp; Footprint">
+                  <span>NEMO Galaxi 3P Backpacking Tent &amp; Footprint</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="https://demerbox.com/" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week3/demerbox.png" alt="DEMERBOX Bluetooth Speaker">
+                  <span>DEMERBOX Bluetooth Speaker</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="https://www.msrgear.com/stoves/whisperlite-universal" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week3/msr.png"  alt="MSR WhisperLite Universal (fuel bottles not included)">
+                  <span>MSR WhisperLite Universal (fuel bottles not included)</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="https://www.msrgear.com/cookware/ceramic-2-pot-set" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week3/msrgtgg2.png" alt="MSR Ceramic 2-Pot Set">
+                  <span>MSR Ceramic 2-Pot Set</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="https://goodto-go.com/shop/" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/GTG%20Variety.png" alt="Good To-Go Variety">
+                  <span>Good To-Go Variety</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://shop.ibex.com/merino-wool-clothing/womens-short-sleeve-shirts/w-w2-kinetic-t" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week3/ibexwomenstee.png" alt="Ibex W’s Kinetic T">
+                  <span>Ibex W’s Kinetic T</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="https://www.ospreypacks.com/us/en/product/aether-ag-70-AETHER70_807.html" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week3/ospreyorange.png" alt="Osprey Packs Aether AG 70">
+                  <span>Osprey Packs Aether AG 70</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://shop.theprobar.com/Products/PROBAR-Variety-Packs" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/probar.png" alt="Pro Bar Variety Pack">
+                  <span>Pro Bar Variety Pack</span>
+                </a>
+              </div>
             </div>
           </article>
           <hr/>
@@ -393,59 +401,61 @@ else {
             <div class="prize-sticker">
               <span>Winner Announced Friday,<br> July 14</span>
             </div>
-            <div class="prize">
-              <a href="https://www.msrgear.com/catalog/product/view/id/16140/s/windburner/category/5/" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/msrwind.png" alt="MSR WindBurner Stove (fuel not included)">
-                <span>MSR WindBurner Stove (fuel not included)</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="https://goodto-go.com/shop/" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/GTG%20Variety.png" alt="Good To-Go Variety">
-                <span>Good To-Go Variety</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://shop.theprobar.com/Products/PROBAR-Variety-Packs" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/probar.png" alt="Pro Bar Variety Pack">
-                <span>Pro Bar Variety Pack</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="https://www.msrgear.com/water/trailshot" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/portafilter.png" alt="MSR TrailShot Pocket-Sized Water Filter">
-                <span>MSR TrailShot Pocket-Sized Water Filter</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="https://www.ospreypacks.com/us/en/product/talon-22-TALON22_550.html" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/ospreygreen.png" alt="Osprey Packs Talon 22">
-                <span>Osprey Packs Talon 22</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://www.ruffwear.com/Highlands-Bed-Dog-Bed?sc=2&category=17" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/ruffwearbed.png" alt="Ruffwear Highlands Bed">
-                <span>Ruffwear Highlands Bed</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://www.nemoequipment.com/product/?p=Apollo%203P" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/awning.png" alt="NEMO Apollo 3P Bikepacking Tent">
-                <span>NEMO Apollo 3P Bikepacking Tent</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://shop.ibex.com/merino-wool-clothing/mens-long-sleeve-shirts/m-indie-hoody" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/indie.png" alt="Ibex M’s or W’s Indie Hoody">
-                <span>Ibex M’s or W’s Indie Hoody</span>
-              </a>
-            </div>
-            <div class="prize">
-              <a href="http://rovrproducts.com/product/8437101315/28106360003" target="_blank">
-                <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/rovr.png" alt="RovR RollR 80 Bike Edition Cooler">
-                <span>RovR RollR 80 Bike Edition Cooler</span>
-              </a>
+            <div class="prize-container">
+              <div class="prize">
+                <a href="https://www.msrgear.com/catalog/product/view/id/16140/s/windburner/category/5/" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/msrwind.png" alt="MSR WindBurner Stove (fuel not included)">
+                  <span>MSR WindBurner Stove (fuel not included)</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="https://goodto-go.com/shop/" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week1/GTG%20Variety.png" alt="Good To-Go Variety">
+                  <span>Good To-Go Variety</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://shop.theprobar.com/Products/PROBAR-Variety-Packs" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/probar.png" alt="Pro Bar Variety Pack">
+                  <span>Pro Bar Variety Pack</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="https://www.msrgear.com/water/trailshot" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/portafilter.png" alt="MSR TrailShot Pocket-Sized Water Filter">
+                  <span>MSR TrailShot Pocket-Sized Water Filter</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="https://www.ospreypacks.com/us/en/product/talon-22-TALON22_550.html" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/ospreygreen.png" alt="Osprey Packs Talon 22">
+                  <span>Osprey Packs Talon 22</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://www.ruffwear.com/Highlands-Bed-Dog-Bed?sc=2&category=17" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/ruffwearbed.png" alt="Ruffwear Highlands Bed">
+                  <span>Ruffwear Highlands Bed</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://www.nemoequipment.com/product/?p=Apollo%203P" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/awning.png" alt="NEMO Apollo 3P Bikepacking Tent">
+                  <span>NEMO Apollo 3P Bikepacking Tent</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://shop.ibex.com/merino-wool-clothing/mens-long-sleeve-shirts/m-indie-hoody" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/indie.png" alt="Ibex M’s or W’s Indie Hoody">
+                  <span>Ibex M’s or W’s Indie Hoody</span>
+                </a>
+              </div>
+              <div class="prize">
+                <a href="http://rovrproducts.com/product/8437101315/28106360003" target="_blank">
+                  <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week4/rovr.png" alt="RovR RollR 80 Bike Edition Cooler">
+                  <span>RovR RollR 80 Bike Edition Cooler</span>
+                </a>
+              </div>
             </div>
           </article>
         </div>
