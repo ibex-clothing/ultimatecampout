@@ -226,9 +226,9 @@ else {
         <div class="prize-container">
 
           <article class="prize-week">
-            <h3>Week 1: June 2 - 8</h3>
-            <div class="prize-sticker">
-              <span>Winner Announced Friday,<br> June 9</span>
+            <h3>Week 1: June 2 - 9</h3>
+            <div class="prize-sticker prize-won">
+              <span>Congrats<br> to winner Emily M.</span>
             </div>
             <div class="prize-container">
               <div class="prize">
@@ -277,9 +277,9 @@ else {
           </article>
           <hr/>
           <article class="prize-week">
-            <h3>Week 2: June 9 - 15</h3>
-            <div class="prize-sticker">
-              <span>Winner Announced Friday,<br> June 16</span>
+            <h3>Week 2: June 9 - 16</h3>
+            <div class="prize-sticker prize-won">
+              <span>Congrats<br> to winner Trevor H.</span>
             </div>
             <div class="prize-container">
               <div class="prize">
@@ -289,7 +289,7 @@ else {
                 </a>
               </div>
               <div class="prize">
-                <a href="https://www.msrgear.com/stoves/pocketrocket-stove-kit" target="_blank">
+                <a href="https://www.msrgear.com/cookware/trail-lite-duo-cook-set" target="_blank">
                   <img src="http://assets.ibex.com.s3.amazonaws.com/images/ultimatecampout/prizes/week2/msrcook.png" alt="MSR Pocket Rocket Stove Kit">
                   <span>MSR Pocket Rocket Stove Kit</span>
                 </a>
@@ -334,9 +334,9 @@ else {
           </article>
           <hr/>
           <article class="prize-week">
-            <h3>Week 3: June 16 - 22</h3>
+            <h3>Week 3: June 16 - 23</h3>
             <div class="prize-sticker">
-              <span>Winner Announced Friday,<br> June 23</span>
+              <span>Winner Selected Friday,<br> June 23</span>
             </div>
             <div class="prize-container">
               <div class="prize">
@@ -398,8 +398,9 @@ else {
           <hr/>
           <article class="prize-week">
             <h3>Week 4, The "Camp One Collection"</h3>
+            <h3>June 23 - 30</h3>
             <div class="prize-sticker">
-              <span>Winner Announced Friday,<br> July 14</span>
+              <span>Winner Announced on Friday,<br> July 14</span>
             </div>
             <div class="prize-container">
               <div class="prize">

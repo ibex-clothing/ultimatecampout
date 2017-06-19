@@ -1,9 +1,13 @@
+function getRandomNumber(max) {
+  return Math.ceil(Math.random()*max);
+}
+
 function getRandomNumbers(needed,max) {
   var arr = []
   while(arr.length < needed){
-      var randomnumber = Math.ceil(Math.random()*max)
-      if(arr.indexOf(randomnumber) > -1) continue;
-      arr[arr.length] = randomnumber;
+    var randomnumber = getRandomNumber(max);
+    if(arr.indexOf(randomnumber) > -1) continue;
+    arr[arr.length] = randomnumber;
   }
   return arr;
 }
@@ -83,7 +87,28 @@ window.onload = function() {
   insertRandomImages();
   tweenIntroContent();
 
+  var hero = document.getElementsByClassName('block__top')[0];
+  var width = window.innerWidth;
 
+  for (var i = 0; i < 20; i++) {
+    var star = document.createElement('div');
+    star.className = 'shooting-star';
+    hero.appendChild(star);
+    var rand = getRandomNumber(400);
+    var size = getRandomNumber(15);
+    var waitRandomizer = getRandomNumber(50);
+    var time = getRandomNumber(4);
+    var wait = (i * 2) * (1 + (waitRandomizer/100));
+    var top = rand - 50;
+    star.style.width = size;
+    star.style.height = size;
+    star.style.top = rand;
+    star.style.left = 0;
+
+    TweenMax.to(star, time, {bezier:[{top:rand, left:0}, {top: top, left: width/2}, {top:rand, left:(width + 10)}], ease:Power1.easeInOut, delay: wait, visibility: 'visible', onComplete: function() {
+      this.target.style.visibility = 'hidden';
+    }});
+  }
 };
 
 
